@@ -20,13 +20,13 @@ local Tabs={Position=Window:AddTab({Title="Positions",Icon="map-pin"}),Main=Wind
 
 SaveManager:SetLibrary(Fluent)
 SaveManager:IgnoreThemeSettings()
-SaveManager:SetFolder("RacketRivals_v146_Fixed")
+SaveManager:SetFolder(" _v146_Fixed")
 
 InterfaceManager:SetLibrary(Fluent)
-InterfaceManager:SetFolder("RacketRivals_v146_Fixed")
+InterfaceManager:SetFolder(" _v146_Fixed")
 
-if getgenv().RacketRivalsV147Loaded then return end
-getgenv().RacketRivalsV147Loaded=true
+if getgenv(). V147Loaded then return end
+getgenv(). V147Loaded=true
 
 -- ═══════════════════════════════════════════════
 -- [ENI] V15 BYPASS — LOADS BEFORE EVERYTHING ELSE
@@ -203,7 +203,7 @@ local function SAC() pcall(function() local cf=LP.PlayerScripts:WaitForChild("Ch
 task.spawn(function() SAC() end)
 
 -- FILE SYSTEM (INSTANT SAVING)
-local CF,BCF,CCF="RacketRivals_Positions.json","RacketRivals_Boundaries.json","RacketRivals_CharacterClone.json"
+local CF,BCF,CCF=" _Positions.json"," _Boundaries.json"," _CharacterClone.json"
 local SP,SB={},{}
 
 local function SPC(cid,pos) if not cid or not pos then return end SP[cid]=pos pcall(function() writefile(CF,Http:JSONEncode(SP)) end) end
